@@ -10,8 +10,8 @@ fi
 
 BACKUP_FILE="$1"
 NEW_DB_NAME="$2"
-OWNER="min"
-TEMP_DIR=$(mktemp -d)
+OWNER="min" #db_user
+TEMP_DIR=$(mktemp -d -p $HOME/.db_restores)
 
 # Extract the backup based on file type
 echo "Extracting $BACKUP_FILE to $TEMP_DIR..."
